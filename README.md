@@ -6,6 +6,8 @@ Server template for file uploading. This is supposed to be a microservice that h
 
 Under the hood it uses ```express``` as the API stack and ```express-fileupload``` to handle uploading files. In the official example express-fileupload uses vanilla form with post request handler. This repo uses fetch API as an example.
 
+all uploaded file are stored in the ```./upload``` dir.
+
 ## Installation and Development
 
 git clone this repo
