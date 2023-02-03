@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" name="sampleFile" id="fileup"/>
+    <button id="submit" onclick="upload()">upload from fetch!</button>
+    <script>
+      const uploadserver = 'http://localhost:3000/upload';
+
+      function upload(){
+        var input = document.querySelector('input[type="file"]')
+
+        var data = new FormData()
+        data.append('sampleFile', input.files[0])
+
+
+        fetch(uploadserver, {
+          method: 'POST',
+          body: data
+        })
+        
+
+      }
+    </script>
+  </body>
+</html>
